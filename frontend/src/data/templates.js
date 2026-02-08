@@ -1,0 +1,130 @@
+export const templates = [
+  {
+    id: 'romantic-classic',
+    name: 'Romance Classique',
+    description: 'Un design intemporel avec des roses et des couleurs douces pour exprimer votre amour.',
+    thumbnail: null,
+    color: '#DC143C',
+    bgGradient: 'linear-gradient(135deg, #DC143C 0%, #FF6B8A 50%, #FFB6C1 100%)',
+    category: 'romantique',
+    slots: {
+      photos: [
+        { id: 'main-photo', label: 'Photo principale', width: 400, height: 400, shape: 'heart' },
+        { id: 'photo-1', label: 'Photo souvenir 1', width: 300, height: 200, shape: 'rounded' },
+        { id: 'photo-2', label: 'Photo souvenir 2', width: 300, height: 200, shape: 'rounded' },
+      ],
+      texts: [
+        { id: 'title', label: 'Titre principal', placeholder: 'Mon amour...', maxLength: 60 },
+        { id: 'message', label: 'Message d\'amour', placeholder: 'Depuis le premier jour...', maxLength: 500 },
+        { id: 'signature', label: 'Signature', placeholder: 'Avec tout mon amour, ...', maxLength: 100 },
+      ],
+    },
+    layout: 'classic',
+  },
+  {
+    id: 'modern-love',
+    name: 'Amour Moderne',
+    description: 'Un design contemporain et minimaliste avec des touches dorées.',
+    thumbnail: null,
+    color: '#E8394D',
+    bgGradient: 'linear-gradient(135deg, #2D1B1E 0%, #8B0000 100%)',
+    category: 'moderne',
+    slots: {
+      photos: [
+        { id: 'hero-photo', label: 'Photo hero plein cadre', width: 800, height: 400, shape: 'rectangle' },
+        { id: 'photo-left', label: 'Photo gauche', width: 250, height: 250, shape: 'circle' },
+        { id: 'photo-right', label: 'Photo droite', width: 250, height: 250, shape: 'circle' },
+      ],
+      texts: [
+        { id: 'title', label: 'Titre', placeholder: 'Toi & Moi', maxLength: 40 },
+        { id: 'subtitle', label: 'Sous-titre', placeholder: 'Notre histoire d\'amour', maxLength: 80 },
+        { id: 'message', label: 'Votre message', placeholder: 'Chaque moment avec toi...', maxLength: 600 },
+        { id: 'date', label: 'Date spéciale', placeholder: '14 Février 2026', maxLength: 30 },
+      ],
+    },
+    layout: 'modern',
+  },
+  {
+    id: 'poetic-garden',
+    name: 'Jardin Poétique',
+    description: 'Un cadre floral enchanteur avec des illustrations de fleurs et papillons.',
+    thumbnail: null,
+    color: '#FF6B8A',
+    bgGradient: 'linear-gradient(135deg, #FFB6C1 0%, #FFF0F3 50%, #E8C69D 100%)',
+    category: 'poetique',
+    slots: {
+      photos: [
+        { id: 'couple-photo', label: 'Photo de couple', width: 350, height: 350, shape: 'oval' },
+        { id: 'memory-1', label: 'Souvenir 1', width: 200, height: 200, shape: 'rounded' },
+        { id: 'memory-2', label: 'Souvenir 2', width: 200, height: 200, shape: 'rounded' },
+        { id: 'memory-3', label: 'Souvenir 3', width: 200, height: 200, shape: 'rounded' },
+      ],
+      texts: [
+        { id: 'poem-title', label: 'Titre du poème', placeholder: 'Ode à mon amour', maxLength: 60 },
+        { id: 'poem', label: 'Votre poème / texte', placeholder: 'Comme une fleur au printemps...', maxLength: 800 },
+        { id: 'dedication', label: 'Dédicace', placeholder: 'Pour toi, mon unique rose...', maxLength: 150 },
+      ],
+    },
+    layout: 'poetic',
+  },
+  {
+    id: 'timeline-love',
+    name: 'Notre Histoire',
+    description: 'Racontez votre histoire d\'amour à travers une timeline romantique.',
+    thumbnail: null,
+    color: '#D4A574',
+    bgGradient: 'linear-gradient(135deg, #FFF8F0 0%, #FFB6C1 50%, #DC143C 100%)',
+    category: 'histoire',
+    slots: {
+      photos: [
+        { id: 'first-meet', label: 'Notre rencontre', width: 300, height: 300, shape: 'rounded' },
+        { id: 'first-date', label: 'Premier rendez-vous', width: 300, height: 300, shape: 'rounded' },
+        { id: 'special-moment', label: 'Moment spécial', width: 300, height: 300, shape: 'rounded' },
+        { id: 'today', label: 'Aujourd\'hui', width: 300, height: 300, shape: 'rounded' },
+      ],
+      texts: [
+        { id: 'couple-names', label: 'Vos prénoms', placeholder: 'Marie & Jean', maxLength: 40 },
+        { id: 'story-1', label: 'Notre rencontre', placeholder: 'C\'était un jour de...', maxLength: 200 },
+        { id: 'story-2', label: 'Premier rendez-vous', placeholder: 'Ce soir-là...', maxLength: 200 },
+        { id: 'story-3', label: 'Moment spécial', placeholder: 'Le jour où...', maxLength: 200 },
+        { id: 'story-4', label: 'Aujourd\'hui', placeholder: 'Ensemble depuis...', maxLength: 200 },
+      ],
+    },
+    layout: 'timeline',
+  },
+];
+
+export const products = [
+  {
+    id: 'book',
+    name: 'Livre d\'Amour',
+    description: 'Un magnifique livre relié avec votre page d\'amour imprimée sur papier premium.',
+    icon: '📖',
+    price: 29.99,
+    currency: 'EUR',
+  },
+  {
+    id: 'calendar',
+    name: 'Calendrier Personnalisé',
+    description: 'Un calendrier 12 mois avec votre design de Saint-Valentin en couverture.',
+    icon: '📅',
+    price: 19.99,
+    currency: 'EUR',
+  },
+  {
+    id: 'frame',
+    name: 'Cadre Photo',
+    description: 'Un cadre photo élégant avec votre page imprimée, prêt à accrocher.',
+    icon: '🖼️',
+    price: 24.99,
+    currency: 'EUR',
+  },
+  {
+    id: 'poster',
+    name: 'Poster Grand Format',
+    description: 'Un poster A2 de haute qualité avec votre page d\'amour.',
+    icon: '🎨',
+    price: 14.99,
+    currency: 'EUR',
+  },
+];

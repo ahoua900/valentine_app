@@ -1,0 +1,334 @@
+/* ============ HERO ============ */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 580px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(135deg, #8B0000, #DC143C, #FF6B8A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-red);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+.stat-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--color-light-pink);
+}
+
+.hero-visual {
+  flex: 0 0 auto;
+  position: relative;
+  width: 360px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-heart-big {
+  font-size: 8rem;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  opacity: 0.15;
+  animation: pulse 2s ease infinite;
+}
+
+.hero-card-preview {
+  width: 280px;
+  height: 320px;
+  background: var(--gradient-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+}
+
+.hero-card-preview:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.preview-inner {
+  text-align: center;
+}
+
+.preview-emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.preview-inner p {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--color-deep-red);
+  line-height: 1.5;
+}
+
+/* ============ HOW IT WORKS ============ */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.step-card {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.step-number {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  background: var(--gradient-button);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.step-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-deep-red);
+  margin-bottom: 0.5rem;
+}
+
+.step-card p {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+}
+
+/* ============ TEMPLATES GRID ============ */
+.templates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.template-card {
+  display: block;
+  cursor: pointer;
+}
+
+.template-card-preview {
+  height: 180px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.template-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(45, 27, 30, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.template-card:hover .template-card-overlay {
+  opacity: 1;
+}
+
+.template-card-cta {
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 10px 24px;
+  background: var(--gradient-button);
+  border-radius: var(--radius-xl);
+}
+
+.template-card-info {
+  padding: 1.2rem;
+}
+
+.template-card-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.template-card-info p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.8rem;
+}
+
+.template-card-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--color-pink);
+  font-weight: 500;
+}
+
+/* ============ PRODUCTS ============ */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.product-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-weight: 700;
+  color: var(--color-red);
+  font-size: 1.1rem;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 2.5rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-card-preview {
+    width: 220px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .templates-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
